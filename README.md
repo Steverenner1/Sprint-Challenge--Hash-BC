@@ -23,12 +23,31 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 ## Interview Questions
 
 Explain in detail the workings of a dynamic array:
+
+**Dynamic arrays grow when you make an insertion, as opposed to a static array where the length and storage size can't be changed.**
+
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
+
+**The runtime complexity to access an array is O(1) because the index allows you to instantly look up a specific item in the data structure**
+**Adding or removing an item from the front is O(n), because of the need to shift all indices in the array, so you have to iterate through the entire thing**
+**Adding or removing an item from the back is O(1), since no indices have to be shifted**
+
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
 
+**The worst case scenario is hitting O(n) because of copying items from the old array to the new array**
+
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+
+**A blockchain is structures as a public ledger of transactions, and uses cryptography as security**
+**A block is a piece of data that contains and Index Number, Time Stamp, Transactions, Proof, and a Previous Hash**
+**The chain is created by storing the hash of the previous block's data, making changes almost impossible since if you wanted to change the data in a specific block, all the previous blocks would need to be changed as well**
+**Data is organized by blocks, the first called the genesis block with an arbitrary hash, then the data in the first block is hashed into a hash and stored into a second block**
  
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+
+**Proof of work is code that is recorded in blocks, and allows people to verify and agree on the state of the blockchain**
+**It protects the chain from attack because it's impossible to add a valid block without finding the proof of work.  Also, the time, energy, and resources it would take to follow through with an attack would be far greater than the reward**
+**Possible attack - mob mining, where a large group of people can mine and split profits**
 
 ## Project Set Up
 
